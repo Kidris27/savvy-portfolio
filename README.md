@@ -11,5 +11,3 @@
 2. [LinkedIn](https://www.linkedin.com/in/kayode-idris-jr-880420163/)
 
 3. Facebook: Soon to be deleted. :)
-
-4. [Github](https://github.com/Kidris27?tab=overview&from=2018-06-01&to=2018-06-12)
