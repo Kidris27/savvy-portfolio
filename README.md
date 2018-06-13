@@ -6,10 +6,10 @@
 
 ## Contact Info:
 
-[Instagram](https://www.instagram.com/omo_ilewe/?hl=en)
+1. [Instagram](https://www.instagram.com/omo_ilewe/?hl=en)
 
-[LinkedIn](https://www.linkedin.com/in/kayode-idris-jr-880420163/)
+2. [LinkedIn](https://www.linkedin.com/in/kayode-idris-jr-880420163/)
 
-Facebook: Soon to be deleted. :)
+3. Facebook: Soon to be deleted. :)
 
-[Github](https://github.com/Kidris27?tab=overview&from=2018-06-01&to=2018-06-12)
+4. [Github](https://github.com/Kidris27?tab=overview&from=2018-06-01&to=2018-06-12)
