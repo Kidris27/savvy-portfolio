@@ -1,0 +1,18 @@
+h3{
+    font-size: 25px;
+    font-style: italic;
+    color: mediumaquamarine;        
+}
+
+p{
+    background-color:lavender;     
+}
+
+.MakeOR {
+    color:orangered;
+    font-style: italic;
+}
+
+#boldlinky{
+    font-weight:bold;
+}
