@@ -2,8 +2,19 @@ body {
     margin: 0;
 }
 
+img {
+    width: 100%;
+    max-width: 500px;
+}
+
+div.hotpink {
+    color: hotpink;
+}
+
 #navigation{
     background-color: blanchedalmond;
+    position: fixed;
+    width: 100vw;
 }
 
 #navigation > ul {
@@ -12,9 +23,37 @@ body {
     list-style: none;
 }
 
-#navigation ul > li {
-    margin-right: 10px;
+#navigation li {
+    margin: 0 10px 0 0;
     display: inline;
+}
+
+#content p + ul{
+background-color: hotpink;
+}
+
+#navigation .container{
+    margin: 0 auto;
+}
+
+#content li{
+    background-color: chartreuse;
+}
+
+#content li:first-child {
+    background-color: aqua  
+}
+
+#content li:last-child{
+    background-color: purple;
+}
+
+#content li:nth-child(2){
+    background-color:red;
+}
+
+#content li:nth-child(3n){
+    background-color: burlywood;
 }
 
 #header{
@@ -29,7 +68,18 @@ body {
 
 #footer{
     padding: 10px;
-    background-color: darkorchid;
+    background-color: lightcoral;
+}
+
+#footer > ul {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+}
+
+#footer ul > li {
+    margin-right: 10px;
+    display: inline;
 }
 
 h3{
@@ -37,14 +87,8 @@ h3{
     font-style: italic;     
 }
 
-p{
-    background-color:silver;     
-}
-
-.MakeOR {
-    font-style: italic;
-}
-
-#boldlinky{
-    font-weight:bold;
+.container{
+    margin: 0 auto;
+    max-width: 760px;
+    width: 100%;
 }
