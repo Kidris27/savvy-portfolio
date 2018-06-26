@@ -1,5 +1,22 @@
+h1{
+    font-family: 'Anonymous Pro', serif;
+}
+
+h3{
+    font-size: 25px;
+    font-style: italic;  
+    text-decoration: underline;   
+}
+
 body {
-    margin: 0;
+    display: grid;
+    grid-template-rows: min-content min-content auto min-content;
+    grid-template-areas: 
+    "navigation"
+    "header"
+    "content"
+    "footer";
+    min-height: 100vh;
 }
 
 img {
@@ -7,34 +24,47 @@ img {
     max-width: 500px;
 }
 
+.fa-instagram {
+    color: darkblue;
+    
+}
+
+.fa-linkedin {
+    color: black;
+}
+
+.fa-facebook {
+color: white;
+}
+
 div.hotpink {
     color: hotpink;
 }
 
-#navigation{
-    background-color: blanchedalmond;
-    position: fixed;
-    width: 100vw;
+#navigation .container {
+    margin: 0 auto;
 }
 
-#navigation li{
+#navigation li {
     position: relative;
 }
 
-#navigation a + ul{
-    background-color: aliceblue;
-    display: none;
-    position: absolute;
-    top: 25px;
-    left: -15px;
+#navigation {
+    background-color: blanchedalmond;
 }
 
-#navigation a:hover + ul,
-#navigation a + ul:hover {
-    display: block;
+#navigation a + ul {
+    background-color: aliceblue;
+    display: none;
+    left: -15px;
+    position: absolute;
+    top: 18px;
 }
 
 #navigation > ul {
+    display: flex;
+    flex-direction:  row;
+    justify-content: space-around;
     margin: 0;
     padding: 10px;
     list-style: none;
@@ -42,18 +72,19 @@ div.hotpink {
 
 #navigation > ul > li {
     margin: 0 10px 0 0;
-    display: inline;
+}
+
+#navigation a:hover + ul,
+#navigation a + ul:hover {
+    display: flex;
+    flex-direction: column;
 }
 
 #content p + ul{
 background-color: hotpink;
 }
 
-#navigation .container{
-    margin: 0 auto;
-}
-
-#content li{
+#content li {
     background-color: chartreuse;
 }
 
@@ -61,29 +92,29 @@ background-color: hotpink;
     background-color: aqua  
 }
 
-#content li:last-child{
+#content li:last-child {
     background-color: purple;
 }
 
-#content li:nth-child(2){
+#content li:nth-child(2) {
     background-color:red;
 }
 
-#content li:nth-child(3n){
+#content li:nth-child(3n) {
     background-color: burlywood;
 }
 
-#header{
+#header {
     padding: 10px;
     background-color: silver;
 }
 
-#content{
+#content {
     padding: 10px;
     background-color: mediumspringgreen;
 }
 
-#footer{
+#footer {
     padding: 10px;
     background-color: lightcoral;
 }
@@ -99,13 +130,18 @@ background-color: hotpink;
     display: inline;
 }
 
-h3{
-    font-size: 25px;
-    font-style: italic;     
+#footer .container {
+    margin: 0 auto;
 }
 
-.container{
+#footer a {
+    text-decoration: none;
+}
+
+.container {
     margin: 0 auto;
     max-width: 760px;
     width: 100%;
 }
+
+/* How to make comments */
