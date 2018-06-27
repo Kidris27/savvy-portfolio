@@ -2,12 +2,6 @@ h1{
     font-family: 'Anonymous Pro', serif;
 }
 
-h3{
-    font-size: 25px;
-    font-style: italic;  
-    text-decoration: underline;   
-}
-
 body {
     display: grid;
     grid-template-rows: min-content min-content auto min-content;
@@ -17,6 +11,7 @@ body {
     "content"
     "footer";
     min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
@@ -26,7 +21,6 @@ img {
 
 .fa-instagram {
     color: darkblue;
-    
 }
 
 .fa-linkedin {
@@ -35,11 +29,7 @@ img {
 
 .fa-facebook {
 color: white;
-}
-
-div.hotpink {
-    color: hotpink;
-}
+} 
 
 #navigation .container {
     margin: 0 auto;
@@ -50,7 +40,9 @@ div.hotpink {
 }
 
 #navigation {
-    background-color: blanchedalmond;
+    background-color: silver;
+    position: sticky;
+    top: 0;
 }
 
 #navigation a + ul {
@@ -106,7 +98,7 @@ background-color: hotpink;
 
 #header {
     padding: 10px;
-    background-color: silver;
+    background-color: lightgoldenrodyellow;
 }
 
 #content {
@@ -141,7 +133,25 @@ background-color: hotpink;
 .container {
     margin: 0 auto;
     max-width: 760px;
-    width: 100%;
 }
 
+@media (min-width: 612px) {
+    body {
+      grid-template-columns: 150px auto;
+      grid-template-rows: min-content auto min-content;
+      grid-template-areas:
+        'navigation header'
+        'navigation content'
+        'navigation footer';
+    }
+
+#navigation {
+    grid-area: navigation;
+}
+
+#navigation > ul {
+    flex-direction: column;
+    height: 50vh;
+}
+}
 /* How to make comments */
