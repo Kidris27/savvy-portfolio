@@ -1,14 +1,18 @@
-var title = document.querySelector('h1');
+import Navigation from './src/Navigation';
+import Header from './src/Header';
+import Content from './src/Content';
+import Footer from './src/Footer';
+import Greeter from './src/Greeter';
 
-var greetUser = function greetUser(){
-    var userName = prompt('What is your name?');
+document
+    .querySelector('#root')
+    .innerHTML = `
+    ${Navigation}
+    ${Header()}
+    ${Content}
+    ${Footer}
+    `;
 
-    if(userName !== ''){
-        title.textContent = title.textContent + '. Welcome, ' + userName;
-    }
-    else{
-        greetUser();
-    }
-};
+console.log(Navigation);
 
-greetUser();
+Greeter();
