@@ -3,21 +3,25 @@ import Header from './src/Header';
 import Content from './src/Content';
 import Footer from './src/Footer';
 
-var Home = {
-    'title': 'Kai Idris\' Project'
+var State = {
+    'Home': {
+        'links': [ 'Blog', 'Contact', 'Projects' ],
+        'title': 'Kai Idris\' Project'
+    },
+    'Blog': {
+        'links': [ 'Home', 'Contact', 'Projects' ],
+        'title': 'My Blog'
+    },
+    'Contact': {
+        'links': [ 'Home', 'Blog', 'Projects' ],
+        'title': 'Contact Me'
+    },
+    'Projects': {
+        'links': [ 'Home', 'Blog', 'Contact' ],
+        'title': 'Da Projects'
+    },
 };
 
-var Blog = {
-    'title': 'My Blog'
-};
-
-var Contact = {
-    'title': 'Contact Me'
-};
-
-var Project = {
-    'title': 'Da Projects'
-};
 
 var root = document.querySelector('#root');
 
@@ -25,9 +29,10 @@ function render(state){
     var greeting;
     var input;
     var links;
+    var i = 0;
 
     root.innerHTML = `
-        ${Navigation}
+        ${Navigation(state)}
         ${Header(state)}
         ${Content}
         ${Footer}
@@ -48,33 +53,19 @@ function render(state){
 
     links = document.querySelectorAll('#navigation a');
 
-    links[0].addEventListener(
-        'click',
-        (event) => {
-            event.preventDefault();
-        
-            render(Blog);
-        }
-    );
+    while(i < links.length){
+        links[i].addEventListener(
+            'click',
+            (event) => {
+                var page = event.target.textContent;
 
-    links[1].addEventListener(
-        'click',
-        (event) => {
-            event.preventDefault();
-        
-            render(Contact);
-        }
-    );
-
-    links[2].addEventListener(
-        'click',
-        (event) => {
-            event.preventDefault();
-        
-            render(Project);
-        }
-    );
+                event.preventDefault();
+      
+                render(State[page]);
+            }
+        );
+        i++;
+    }
 }
-    
 
-render(Home);
+render(State['Home']);
