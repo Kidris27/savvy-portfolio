@@ -1,9 +1,24 @@
+import { lowerCase } from 'lodash';
+
+console.log(lowerCase);
+
 function buildLinks(links){
-    var i = 0;
     var result = '';
+    var i = 0;
+    var link = '/';
 
     while(i < links.length){
-        result += `<li><a href="/${links[i]}">${links[i]}</a><li>`;
+        if(links[i] !== 'Home'){
+            link += lowerCase(links[i]);
+        }
+    
+        result += `
+        <li>
+          <a href="${lowerCase(link)}" data-navigo>${links[i]}</a>
+        </li>
+        `;
+
+        link = '/';
 
         i++;
     }

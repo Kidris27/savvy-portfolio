@@ -2,42 +2,24 @@ import Navigation from './src/Navigation';
 import Header from './src/Header';
 import Content from './src/Content';
 import Footer from './src/Footer';
-
-var State = {
-    'Home': {
-        'links': [ 'Blog', 'Contact', 'Projects' ],
-        'title': 'Kai Idris\' Project'
-    },
-    'Blog': {
-        'links': [ 'Home', 'Contact', 'Projects' ],
-        'title': 'My Blog'
-    },
-    'Contact': {
-        'links': [ 'Home', 'Blog', 'Projects' ],
-        'title': 'Contact Me'
-    },
-    'Projects': {
-        'links': [ 'Home', 'Blog', 'Contact' ],
-        'title': 'Da Projects'
-    },
-};
-
+import * as State from './store';
+import Navigo from 'navigo';
+import { capitalize } from 'lodash';
 
 var root = document.querySelector('#root');
+var router = new Navigo(location.origin);
 
 function render(state){
     var greeting;
     var input;
-    var links;
-    var i = 0;
 
     root.innerHTML = `
         ${Navigation(state)}
         ${Header(state)}
-        ${Content}
+        ${Content(state)}
         ${Footer}
         `;
-
+        
     greeting = document.querySelector('#greeting');
     input = document.querySelector('#header input');
         
@@ -51,21 +33,17 @@ function render(state){
             `
     );
 
-    links = document.querySelectorAll('#navigation a');
-
-    while(i < links.length){
-        links[i].addEventListener(
-            'click',
-            (event) => {
-                var page = event.target.textContent;
-
-                event.preventDefault();
-      
-                render(State[page]);
-            }
-        );
-        i++;
-    }
+    
+    router.updatePageLinks();
 }
 
-render(State['Home']);
+function handleRoute(params){
+    var page = capitalize(params.page);
+
+    render(State[page]);
+}
+
+router
+    .on('/:page', handleRoute)
+    .on('/', () => handleRoute({ 'page': 'home' }))
+    .resolve();
