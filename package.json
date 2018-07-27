@@ -4,6 +4,7 @@
   "description": "![My Face](https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/34014487_1978506872161729_743732527138603008_n.jpg?_nc_cat=0&oh=6ee010e6f961828b620bac8cf913fe3a&oe=5BA593C6)",
   "main": "index.js",
   "scripts": {
+    "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +19,8 @@
   },
   "homepage": "https://github.com/Kidris27/savvy-portfolio#readme",
   "devDependencies": {
-    "eslint": "^4.19.1"
+    "eslint": "^4.19.1",
+    "parcel-bundler": "^1.9.7"
   },
   "dependencies": {
     "axios": "^0.18.0",

@@ -1,4 +1,5 @@
-export default `
+export default function Home(){
+    return `
     <p>Hi, my name is Kayode but you can call me Kai! I'm seeking entry level positions for web development and programming!</p>
     <ul>
         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia necessitatibus impedit id tempora odit dolor eveniet rem maxime asperiores, illum distinctio aliquam nemo doloremque quos harum ab vitae voluptatibus magnam!</li>
@@ -9,3 +10,4 @@ export default `
         <li>Doloribus harum voluptatem ratione adipisci quas, doloremque tempora dolorem ut, fuga nihil dolore similique architecto nulla. Dolore esse distinctio reiciendis omnis beatae, maiores odio voluptate, minima pariatur excepturi minus magnam.</li>
     </ul>
 `;
+}

@@ -1,4 +1,5 @@
-export default `
+export default function Contact(){
+    return `
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,3 +47,4 @@ export default `
 </body>
 </html>
 `;
+}
