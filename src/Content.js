@@ -5,7 +5,6 @@ export default function Content(state, posts){
 <div id="content">
     <div class="container">
     ${Pages[state.body](posts)}
-    </ul>
     </div>
 </div>
 `;
