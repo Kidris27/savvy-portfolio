@@ -14,8 +14,8 @@ State.posts = [];
 
 
 function render(state){
-    var greeting;
-    var input;
+    // var greeting;
+    // var input;
 
     root.innerHTML = `
         ${Navigation(state)}
@@ -24,18 +24,18 @@ function render(state){
         ${Footer}
         `;
         
-    greeting = document.querySelector('#greeting');
-    input = document.querySelector('#header input');
+    // greeting = document.querySelector('#greeting');
+    // input = document.querySelector('#header input');
     
-    input.addEventListener(
-        'keyup',
-        (event) =>  greeting.innerHTML = `
-            <div>
-            <h3>Welcome to my world,</h3>
-            <h4>${event.target.value}</h4>
-            </div>
-            `
-    );
+    // input.addEventListener(
+    //     'keyup',
+    //     (event) =>  greeting.innerHTML = `
+    //         <div>
+    //         <h3>Welcome to my world,</h3>
+    //         <h4>${event.target.value}</h4>
+    //         </div>
+    //         `
+    // );
     
     
     router.updatePageLinks();

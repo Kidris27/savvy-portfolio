@@ -7,9 +7,9 @@ var story = {
     'ENGAGE': 'Congrats! You\'ve chosen to embark on a journey that very few have selected to partake in. CITY or SUBURB',
     'CITY': 'The young man was born into humble, windy beginnings. Hailing from the great city known as \"Chicago\" & before delving any further\; the answer is \"no\" he is not a baseball fan. SUBURB',
     'SUBURB': 'The young man\'s formative years started in the Village of Romeoville. NIGERIA or USAF',
-    'NIGERIA': 'Wanting to him to know his roots, his family sent him to Nigeria for middle school, where he stayed for 2 years.',
-    'USAF': 'Looking for a desire to travel the world, the young man enlisted into the Air Force. Travel he did! Ohio, Italy and STL are a few places he\'s been to. PRESENT or FUTURE',
-    'PRESENT': 'The young man is currently transitioning from the Air Force back to civilian world.',
+    'NIGERIA': 'Wanting to him to understand his roots, his family sent him to Nigeria for middle school, where he stayed for 2 years. PRESENT or FUTURE',
+    'USAF': 'Yearning for a desire to travel the world, the young man enlisted into the Air Force. Travel he did! Ohio, Italy and STL are a few places he\'s been to. PRESENT or FUTURE',
+    'PRESENT': 'The young man is currently transitioning from the Air Force back to civilian world and wishes to bestow upon you parchment if you ever wish to summon him for his services.',
     'FUTURE': 'The young man seeks to put his skills and knowledge to use with future emplyers. He is eager to learn and become a better developer. He hopes that you give him an opportunity to.'
 
 
@@ -20,9 +20,11 @@ var selection = prompt(story['start']);
 
 var storyTime = function(selection){
     while(checkEnd === false){
-        if(selection === 'ENGAGE' || selection === 'CITY'){
-            selection = prompt(story[selection]);
-            output.textContent = (story[selection]);
+        if(selection === 'ENGAGE' || selection === 'SUBURB'){
+            if(selection === 'CITY' || selection === 'USAF'){
+                selection = prompt(story[selection]);
+                output.textContent = (story[selection]);
+            }
         }
         else{
             checkEnd = true;
