@@ -10,11 +10,12 @@ export default function Contact(){
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Contact Me!</h1>  
+    <h1>Feedback</h1>  
 
-    <form action="//formspree.io/kayodeidrisjr@gmail.com" method="POST">        <input type="text" name="firstname" value="First Name" size="100" autofocus>
-        <input type="text" name="lastname" value="Last Name" size="100">
-        <input type="email" name="userEmail" placeholder="your.email@example.com">
+    <form action="//formspree.io/kayodeidrisjr@gmail.com" method="POST">       
+        <input type="text" name="firstname" placeholder="First Name" size="85" autofocus>
+        <input type="text" name="lastname" placeholder="Last Name" size="85">
+        <input type="email" name="userEmail" placeholder="your.email@example.com" size="85">
       
         <label>What's this message about?
           <input type="radio" name="subject" value="professional" checked><span>I'd like to hire you!</span>
@@ -22,10 +23,10 @@ export default function Contact(){
           <input type="radio" name="subject" value="other" checked><span>Don't know/something else</span>
         </label>
       
-        <input type="checkbox" name="optin" value="trusting" checked>Subscribe me to your newsletter!
-        <input type="checkbox" name="optout" value="skeptical" disabled>Cheeky checkbox...
+       <!-- <input type="checkbox" name="optin" value="trusting" checked>Subscribe me to your newsletter!
+        <input type="checkbox" name="optout" value="skeptical" disabled>Cheeky checkbox... -->
       
-        <label for="marketing">How did you hear about me?</label>
+        <label for="marketing"><br>How did you hear about me?</br></label>
         <select name="marketing">
           <optgroup label="Online">
             <option value="social">Social Media (FB, Twitter, LinkedIn)</option>
@@ -41,7 +42,7 @@ export default function Contact(){
           <option value="other">Other</option>
         </select>
       
-        <textarea name="user_message" rows="8" cols="40"></textarea>
+        <textarea name="user_message" rows="5" cols="95"></textarea>
         <input type="submit">
       </form>
 </body>

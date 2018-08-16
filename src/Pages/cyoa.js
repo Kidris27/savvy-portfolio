@@ -9,8 +9,8 @@ var story = {
     'SUBURB': 'The young man\'s formative years started in the Village of Romeoville. NIGERIA or USAF',
     'NIGERIA': 'Wanting to him to understand his roots, his family sent him to Nigeria for middle school, where he stayed for 2 years. PRESENT or FUTURE',
     'USAF': 'Yearning for a desire to travel the world, the young man enlisted into the Air Force. Travel he did! Ohio, Italy and STL are a few places he\'s been to. PRESENT or FUTURE',
-    'PRESENT': 'The young man is currently transitioning from the Air Force back to civilian world and wishes to bestow upon you parchment if you ever wish to summon him for his services.',
-    'FUTURE': 'The young man seeks to put his skills and knowledge to use with future emplyers. He is eager to learn and become a better developer. He hopes that you give him an opportunity to.'
+    'PRESENT': 'The young man is currently transitioning from the Air Force back to civilian sector and wishes to bestow upon you parchment if you ever wish to summon him for his services.',
+    'FUTURE': 'The young man seeks to put his skills and knowledge to use with future employers. He is eager to learn and become a better developer. He hopes that you give him an opportunity to.'
 
 
 };
