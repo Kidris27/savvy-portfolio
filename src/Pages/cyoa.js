@@ -21,6 +21,8 @@ var selection = prompt(story['start']);
 var storyTime = function(selection){
     while(checkEnd === false){
         if(selection === 'ENGAGE' || selection === 'SUBURB'){
+            selection = prompt(story[selection]);
+            output.textContent = (story[selection]);
             if(selection === 'CITY' || selection === 'USAF'){
                 selection = prompt(story[selection]);
                 output.textContent = (story[selection]);

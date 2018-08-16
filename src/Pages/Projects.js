@@ -1,6 +1,6 @@
 export default function Projects(){
     return `
-    <div id="cyoaoutput">The Journey</div>
-    <script src="../src/Pages/cyoa.js"></script>
+    <div id="cyoaoutput"></div>
+    <img src="http://www.austcor.com/uploads/63871/ufiles/graphics/Under-Construction.jpg">
 `;
 }
