@@ -92,8 +92,7 @@ background-color: hotpink;
 
 #header {
     padding: 10px;
-    background-image: url(/assets/light-grey-terrazzo.png);
-    
+    background-image: url(../assets/light-grey-terrazzo.png);
 }
 
 #content {
